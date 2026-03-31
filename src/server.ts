@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+// Serve frontend static files
+app.use(express.static('public'));
+
 // API Routes
 app.use('/users', usersController);
 
